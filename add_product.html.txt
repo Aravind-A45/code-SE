@@ -1,0 +1,31 @@
+<style>
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form input[type="submit"] {
+        width: 20%;
+    }
+</style>
+<form method="post" class="form">
+    {% csrf_token %}
+    <div>
+        <label>Product name :</label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label>Price :</label>
+        <input type="text" name="price">
+    </div>
+    <div>
+        <label>Actual Quantity :</label>
+        <input type="number" name="act_qty">
+    </div>
+    <div>
+        <label>Available Quantity :</label>
+        <input type="number" name="aval_qty">
+    </div>
+    <input type="submit" value="Submit">
+</form>
+<br><br>
+<a href="{% url 'home' %}">Home</a>
